@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="polytoDo">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+    <title>PolytoDo - register</title>
+
+  <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-cookies.js"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="app/index.js"></script>
+  <script src="app/controllers/userCtrl.js"></script>
+  <script src="app/factory/userFactory.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">PolyToDo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home Page
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header - set the background image for the header in the line below -->
+  <header class="py-5 bg-image-full" style="background-image: url('https://zupimages.net/up/19/22/mwzr.jpg'); align-self: center;">
+    <img class="img-fluid d-block mx-auto" src="assets/images/poly.png" alt="">
+  </header>
+
+  <!-- Content section -->
+  <section class="py-5" ng-controller="userCtrl">
+    <div class="container" id="register">
+
+        <div class="row">
+            <div class="col-md-5 col-md-offset-3" id="colonne">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 center>Sign up here !</h3>
+            
+                    </div>
+                    <div class="card-body">
+                        <form name="my-form" ng-submit="register(user)">
+                            <div class="form-group row">
+                                <label for="username" class="col-md-4 col-form-label text-md-right">Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="username" class="form-control" placeholder="username" name="username" ng-model="user.username" required autofocus>
+                                </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" id="password" class="form-control" placeholder="password" name="password" ng-model="user.password" required autofocus>
+                                </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password Confirmation</label>
+                                <div class="col-md-6">
+                                    <input type="password" id="password_check" class="form-control" placeholder="confirmation password" name="password_check" required autofocus>
+                                </div>
+                            </div>
+    
+    
+                            <div class="col-md-7 offset-md-2" id="bouton"></div>
+                            <button type="submit" class="btn btn-danger btn-lg btn-block">Create account
+                            </button>
+                        </form>
+                        <div class="alert alert-danger display-error mt-3" style="display: none"></div>
+                    </div>
+                    <p class="text-center">already a member? <a href="/login">sign in !</a></p>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+
+    </body>
+</main>
+  </section>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">
+        <span id="copyright">
+        &copy;
+        <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+        </script> - Bastien Roure & Ghofrane Guizani
+    </span></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+      <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
