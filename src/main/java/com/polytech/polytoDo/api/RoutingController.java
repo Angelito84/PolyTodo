@@ -25,4 +25,9 @@ public class RoutingController {
     public String feed(){
         return "/feed.html";
     }
+
+    @GetMapping("/")
+    public String index() {
+        return "/index.html";
+    }
 }
