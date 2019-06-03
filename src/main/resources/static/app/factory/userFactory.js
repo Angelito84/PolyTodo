@@ -2,7 +2,6 @@ polytoDo.factory('userFactory', ['$http', function($http) {
     var factory = {};
 
     factory.addUser = function (user, callback) {
-        console.log(user);
         $http({
             method: 'POST',
             url: '/addUser',

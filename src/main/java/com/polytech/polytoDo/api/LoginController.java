@@ -39,7 +39,7 @@ public class LoginController {
         try {
             userService.addUser(user);
         } catch (UsernameAlreadyExistsException e){
-            throw new ResponseStatusException(HttpStatus.I_AM_A_TEAPOT, e.getMessage(), e);
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
         }
     }
 
