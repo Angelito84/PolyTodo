@@ -1,7 +1,7 @@
 polytoDo.controller('userCtrl', ['$scope', '$http', '$window', '$timeout', '$location', 'userFactory', function ($scope, $http, $window, $timeout, $location, userFactory) {
     $scope.checkLogin = function(){
         if($location.absUrl().includes("?error")){
-            $(".display-error").html("<ul> Incorrect IDs </ul>");
+            $(".display-error").html("<ul> <li> Incorrect IDs </li> </ul>");
             $(".display-error").css("display", "block");      }
     };
 
