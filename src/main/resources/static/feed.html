@@ -76,8 +76,7 @@
         </div>
     </div>
     <div class="card-body" ng-init="refreshSet()">
-        <h2> Your Todo Tasks </h2>
-
+        <h2>Your todo list</h2>
         <ul class="list-unstyled">
             <li class="item" ng-repeat="task in tasks">
                 <div class="row">
@@ -99,8 +98,7 @@
         </ul>
     </div>
     <div class="card-footer">
-
-        <h2 ng-submit="addTask(nameTask)">
+        <form ng-submit="addTask(nameTask)">
             <div class="row">
                 <div class="col-10">
                     <input class="form-control" placeholder="add task" ng-model="nameTask" type="text">
