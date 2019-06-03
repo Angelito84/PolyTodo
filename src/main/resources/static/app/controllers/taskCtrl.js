@@ -38,7 +38,4 @@ polytoDo.controller('taskCtrl', ['$http', '$scope','taskFactory', function ($htt
             $scope.refreshSet();
         });
     };
-
-    $scope.getLoggedUser();
-    $scope.refreshSet();
 }]);
